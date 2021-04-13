@@ -1,4 +1,4 @@
-// /* eslint-disable */
+/* eslint-disable */
 
 import React, { useState } from "react";
 import people from "../../data";
@@ -10,10 +10,10 @@ const Review = () => {
   const { name, job, image, text } = people[index];
 
   return (
-    <article>
-      <div>
-        <img src={image} alt={name} />
-        <span>
+    <article className="review">
+      <div className='img-container'>
+        <img src={image} alt={name} className="person-img"/>
+        <span className="quote-icon">
           <FaQuoteRight />
         </span>
       </div>
@@ -24,13 +24,14 @@ const Review = () => {
         <button className="prev-btn">
           <FaChevronLeft />
         </button>
-        <button className="prev-btn">
+        <button className="next-btn">
           <FaChevronRight />
         </button>
       </div>
       <button className="random-btn">random</button>
     </article>
   );
+
 };
 
 export default Review;
